@@ -178,10 +178,9 @@ ol {
   padding-inline-start: 5px;
 }
 
-.search-form__label-text:hover {
+.search-form__label:hover .search-form__label-text{
   text-decoration: underline;
 }
-
 
 .button {
   cursor: pointer;
