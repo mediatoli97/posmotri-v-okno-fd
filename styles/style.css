@@ -5,20 +5,21 @@
 }
 
 html {
-  block-size: 1140px 534px;
+  block-size: 100%;
 }
 
 .page {
   display: flex;
-  inline-size: 1140px;
+  inline-size: 1200px;
   block-size: 100%;
   margin: auto;
   color: #fff;
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
-  overflow: hidden;
-  margin-left: 240px;
+  align-items: center;
+  justify-content: center;
+
 }
 
 h1,
@@ -39,12 +40,22 @@ ul,
 ol {
   list-style: none;
 }
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgb(217 217 217 / 10%);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #D9D9D9;
+}
 /* Было изначально*/
 .content {
   margin: 133px 30px;
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
   gap: 30px;
 }
 
@@ -58,6 +69,7 @@ ol {
   height: 386px;
   margin-top: 94px;
   position: relative;
+
 }
 
 .result__video {
@@ -166,7 +178,7 @@ ol {
   padding-inline-start: 5px;
 }
 
-.search-form__label:hover {
+.search-form__label-text:hover {
   text-decoration: underline;
 }
 
@@ -265,14 +277,16 @@ ol {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: flex-start;
+  max-width: 399px;
 }
 
 .content__video-card-description-container {
   padding-inline-start: 2px;
+  overflow: hidden;
 }
 
 .content__video-card-title {
-  font-family: "Oswald";
+  font-family: "Oswald", sans-serif;
   font-weight: 700;
   font-size: 30px;
   line-height: 100%;
@@ -291,6 +305,7 @@ ol {
 .more-button {
   margin: 2px;
   padding: 6px 140px;
+  margin-top: 30px;
 }
 
 .content__video-card-thumbnail {
